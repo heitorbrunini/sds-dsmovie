@@ -35,9 +35,9 @@
     padding: 10px 10px 20px 10px;
     border-radius: 0 0 8px 8px;
 }
-
+/*pegando*/
 .dsmovie-card-bottom-container h3 {
-    color: cyan;
+    color: #4A4A4A;
     text-align: center;
     font-size: 14px;
     font-weight: 700;

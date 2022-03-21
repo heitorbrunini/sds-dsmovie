@@ -4,9 +4,11 @@
     align-items: center;
 }
 
+/*pegando*/
+
 .dsmovie-score-value {
     margin: 0;
-    color: magenta;
+    color: #FFBB3A;
     font-size: 16px;
     font-weight: 700;
 }
