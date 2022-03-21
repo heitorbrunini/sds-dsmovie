@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 import { MoviePage } from "types/movie";
 import { BASE_URL } from "utils/request";
 import './styles.css';
-
+//yarn run v1.22.10
 function Listing() {
 
-    const [pageNumber] = useState(0);
+    const [pageNumber, setPageNumber] = useState(0);
 
     const [page, setPage] = useState<MoviePage>({
         content: [],
