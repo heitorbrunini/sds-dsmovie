@@ -5,7 +5,7 @@ import Pagination from "components/pagination";
 import { useEffect, useState } from "react";
 import { MoviePage } from "types/movie";
 import { BASE_URL } from "utils/request";
-import './styles.css';
+
 //yarn run v1.22.10
 function Listing() {
 
