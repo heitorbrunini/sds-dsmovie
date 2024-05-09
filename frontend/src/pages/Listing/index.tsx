@@ -16,7 +16,7 @@ function Listing() {
         last: true,
         totalPages: 0,
         totalElements: 0,
-        size: 12,
+        size: 15,
         number: 0,
         first: true,
         numberOfElements: 0,
@@ -24,7 +24,7 @@ function Listing() {
     });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=id`).then(
+        axios.get(`${BASE_URL}/movies?size=15&page=${pageNumber}&sort=id`).then(
             response => {
                 const data = response.data as MoviePage;
                 setPage(data);
