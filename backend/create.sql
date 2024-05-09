@@ -9,7 +9,7 @@ INSERT INTO tb_user(email) VALUES ('ana@gmail.com');
 INSERT INTO tb_user(email) VALUES ('lucia@gmail.com');
 INSERT INTO tb_user(email) VALUES ('joaquim@gmail.com');
 INSERT INTO tb_movie(score, count, title, image) VALUES (4.5, 2, 'Interestelar', 'https://www.themoviedb.org/t/p/w500_and_h282_face/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg');
-INSERT INTO tb_movie(score, count, title, image) VALUES (3.3, 3, 'O Profissional', 'https://www.themoviedb.org/t/p/w500_and_h282_face/oPcxdm2rNv5xg2sZlzjwKtAiPXl.jpg');
+INSERT INTO tb_movie(score, count, title, image) VALUES (3.3, 3, 'O Profissional', 'https://image.tmdb.org/t/p/original/jRJrQ72VLyEnVsvwfep8Xjlvu8c.jpg');
 INSERT INTO tb_movie(score, count, title, image) VALUES (0, 0, 'Meia Noite em Paris', 'https://www.themoviedb.org/t/p/w500_and_h282_face/zdsvY5RmPnZPx9U9yZa0b94m52x.jpg');
 INSERT INTO tb_movie(score, count, title, image) VALUES (0, 0, 'O Grande Truque', 'https://www.themoviedb.org/t/p/w500_and_h282_face/yCnJT53HMXAK87xzPAdjdYhZ3JE.jpg');
 INSERT INTO tb_movie(score, count, title, image) VALUES (0, 0, 'Um Estranho no Ninho', 'https://www.themoviedb.org/t/p/w500_and_h282_face/oje9d0EXQyQcxsqHQor4xFVGjrd.jpg');

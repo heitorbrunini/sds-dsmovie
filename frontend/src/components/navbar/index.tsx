@@ -12,6 +12,7 @@ function Navbar() {
                             <div className="dsmovie-contact-container">
                                 <Githubicon />
                                 <p className="contact-link">
+                                    <br/>
                                     /heitorbrunini
                                 </p>
                             </div>

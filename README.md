@@ -1,8 +1,11 @@
 # Projeto SDS Dsmovie
 
 Este é um projeto de filmes e avaliações de filmes, onde os usuários podem visualizar informações sobre os filmes e registrar suas avaliações. O sistema foi desenvolvido usando Spring Boot no backend e React no frontend.
+![image](./imagem.png)
+*Figura 1: Imagem do Projeto*
 
 ![image](https://github.com/Sammy192/desafioDSMovie_restAssured/assets/53224915/bf46628b-77ca-4a16-96a2-e01fafb7821e)
+*Figura 2: Diagrama de Classes do Backend*
 
 ## Funcionalidades
 
