@@ -17,7 +17,6 @@ Este é um projeto de filmes e avaliações de filmes, onde os usuários podem v
 ## Tecnologias Utilizadas
 
 - **Backend:** Spring Boot
-![image](https://github.com/Sammy192/desafioDSMovie_restAssured/assets/53224915/bf46628b-77ca-4a16-96a2-e01fafb7821e)
 - **Frontend:** React
 
 ## Configuração do Ambiente de Desenvolvimento
