@@ -14,9 +14,7 @@ Este é um projeto de filmes e avaliações de filmes, onde os usuários podem v
 
 - **Cálculo de Média de Notas:** Sempre que uma nova avaliação é registrada, o sistema calcula automaticamente a média das notas de todos os usuários para o filme em questão e armazena essa média na entidade Movie, junto com a contagem de votos.
 
-- **Gerenciamento de Filmes (Apenas para Admin):** As operações de inserção, atualização e exclusão de filmes são permitidas apenas para usuários administradores (ADMIN).
-
-![image](https://github.com/Sammy192/desafioDSMovie_restAssured/assets/53224915/bf46628b-77ca-4a16-96a2-e01fafb7821e).
+![image](https://github.com/Sammy192/desafioDSMovie_restAssured/assets/53224915/bf46628b-77ca-4a16-96a2-e01fafb7821e)
 
 *Figura 2: Diagrama de Classes do Backend*
 
