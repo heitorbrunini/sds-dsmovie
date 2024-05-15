@@ -23,7 +23,7 @@ public class ScoreService {
 	private ScoreRepository scoreRepository;
 	
 	@Transactional
-	public void saveScore(ScoreDTO dto) {
+	public Score saveScore(ScoreDTO dto) {
 		
 		User user = userRepository.findByEmail(dto.getEmail());
 		
@@ -50,7 +50,8 @@ public class ScoreService {
 		movie.setScore(sum / movie.getScores().size());
 		movie.setCount(movie.getScores().size());
 		
-		movie=movieRepository.save(movie);		
+		movie=movieRepository.save(movie);
+		return score;
 	}
 	
 	
