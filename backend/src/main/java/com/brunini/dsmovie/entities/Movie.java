@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.brunini.dsmovie.dto.MovieDTO;
+
 @Entity
 @Table(name="tb_movie")
 public class Movie {
@@ -24,8 +26,12 @@ public class Movie {
 	@OneToMany(mappedBy = "id.movie")
 	private Set<Score> scores = new HashSet<>();
 	
-	public Movie() {
-		
+	public Movie(MovieDTO data) {
+		this.id = data.getId();
+		this.title = data.getTitle();
+		this.score = data.getScore();
+		this.count = data.getCount();
+		this.image = data.getImage();
 	}
 
 	public Movie(Long id, String title, Double score, Integer count, String image) {

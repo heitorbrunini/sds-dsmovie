@@ -19,6 +19,7 @@ public class MovieService {
 	@Transactional(readOnly = true)
 	public Page<MovieDTO> findAll(Pageable pageable) {
 		Page<Movie> result = repository.findAll(pageable);
+		System.out.println(result);
 		Page<MovieDTO> page= result.map(x -> new MovieDTO(x));		
 		return page;
 	}
@@ -29,6 +30,13 @@ public class MovieService {
 		MovieDTO dto = new MovieDTO (result);
 		return dto;
 	}
+	
+	public Movie createMovie(MovieDTO data) {
+		Movie movie = new Movie(data);
+		repository.save(movie);
+		return movie;
+	}
+	
 	
 		
 }
