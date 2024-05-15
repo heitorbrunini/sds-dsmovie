@@ -40,7 +40,7 @@ Este é um projeto de filmes e avaliações de filmes, onde os usuários podem v
 - O aplicativo estará disponível em `http://localhost:3000` por padrão.
 
 ## Testes (Backend)
-- Este projeto inclui testes para os serviços ScoreService e MovieService utilizando JUnit 5 e Mockito.
+- O backend deste projeto inclui testes para os serviços ScoreService e MovieService utilizando JUnit 5 e Mockito.
 - ScoreServiceTest: Testes para as funcionalidades do `ScoreService`.
 - MovieServiceTest: Testes para as funcionalidades do `MovieService`.
 
