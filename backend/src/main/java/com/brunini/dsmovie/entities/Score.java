@@ -4,22 +4,24 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
 @Table(name="tb_score")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(of="id")	
 public class Score {
 	
 	@EmbeddedId
 	private ScorePK id = new ScorePK();
 	private Double value;
-	
-	public Score() {
-		
-	}
-		
-	public Score(ScorePK id, Double value) {
-		this.id = id;
-		this.value = value;
-	}
 
 	public void setMovie(Movie movie) {
 		id.setMovie(movie);
@@ -29,21 +31,5 @@ public class Score {
 		id.setUser(user);
 	}
 
-	public ScorePK getId() {
-		return id;
-	}
-
-	public void setId(ScorePK id) {
-		this.id = id;
-	}
-
-	public Double getValue() {
-		return value;
-	}
-
-	public void setValue(Double value) {
-		this.value = value;
-	}
-	
 	
 }

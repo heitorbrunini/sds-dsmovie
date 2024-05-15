@@ -6,7 +6,16 @@ import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Embeddable
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class ScorePK implements Serializable{
 	private static final long serialVersionUID = 1L;
 
@@ -18,30 +27,6 @@ public class ScorePK implements Serializable{
 	@JoinColumn(name = "user_id")
 	private User user;
 	
-	ScorePK(){
-		
-	}
-	
-	public ScorePK(Movie movie, User user) {
-		this.movie = movie;
-		this.user = user;
-	}
-
-	public Movie getMovie() {
-		return movie;
-	}
-
-	public void setMovie(Movie movie) {
-		this.movie = movie;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
 	
 
 }

@@ -12,8 +12,20 @@ import javax.persistence.Table;
 
 import com.brunini.dsmovie.dto.MovieDTO;
 
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
 @Table(name="tb_movie")
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(of="id")	
 public class Movie {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,11 +39,11 @@ public class Movie {
 	private Set<Score> scores = new HashSet<>();
 	
 	public Movie(MovieDTO data) {
-		this.id = data.getId();
-		this.title = data.getTitle();
-		this.score = data.getScore();
-		this.count = data.getCount();
-		this.image = data.getImage();
+		this.id = data.id();
+		this.title = data.title();
+		this.score = data.score();
+		this.count = data.count();
+		this.image = data.image();
 	}
 
 	public Movie(Long id, String title, Double score, Integer count, String image) {
@@ -41,24 +53,5 @@ public class Movie {
 		this.count = count;
 		this.image = image;
 	}
-
-	public Long getId() {return id;	}
-	public void setId(Long id) {this.id = id;}
-
-	public String getTitle() {return title;}
-	public void setTitle(String title) { this.title = title;}
-
-	public Double getScore() { return score;}
-	public void setScore(Double score) {this.score = score;	}
-
-	public Integer getCount() {	return count;}
-	public void setCount(Integer count) {this.count = count;}
-
-	public String getImage() {return image;	}
-	public void setImage(String image) {this.image = image;}
-
-	public Set<Score> getScores() {return scores;}
-	
-		
 	
 }
