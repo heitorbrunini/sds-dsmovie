@@ -20,7 +20,7 @@ Este é um projeto de filmes e avaliações de filmes, onde os usuários podem v
 
 ## Tecnologias Utilizadas
 
-- **Backend:** Spring Boot
+- **Backend:** Spring Boot, JUnit 5
 - **Frontend:** React
 
 ## Configuração do Ambiente de Desenvolvimento
@@ -38,6 +38,11 @@ Este é um projeto de filmes e avaliações de filmes, onde os usuários podem v
 
 4. **Acessar o Aplicativo:**
 - O aplicativo estará disponível em `http://localhost:3000` por padrão.
+
+## Testes (Backend)
+- Este projeto inclui testes para os serviços ScoreService e MovieService utilizando JUnit 5 e Mockito.
+- ScoreServiceTest: Testes para as funcionalidades do `ScoreService`.
+- MovieServiceTest: Testes para as funcionalidades do `MovieService`.
 
 ## API Endpoints (Backend)
 
