@@ -36,7 +36,7 @@ class MovieServiceTest {
 	@Mock
 	private MovieRepository repository;
 
-	// inject the fake repository into MovieService to make queries
+	// inject the fake repository into the service to make queries
 	@InjectMocks
 	private MovieService service;
 	
