@@ -59,7 +59,7 @@ class ScoreServiceTest {
 		when(movieRepository.save(any(Movie.class))).thenReturn(movie);
 		when(movieRepository.findById(1L)).thenReturn(Optional.of(movie));
 		
-		when(userRepository.findByEmail(data.getEmail())).thenReturn(user);
+		when(userRepository.findByEmail(data.email())).thenReturn(user);
 		
 		when(scoreRepository.saveAndFlush(any(Score.class))).thenReturn(savedScore);
 				
@@ -68,7 +68,7 @@ class ScoreServiceTest {
 		verify(movieRepository).save(any(Movie.class));
 		verify(movieRepository).findById(1L);
 		
-		verify(userRepository).findByEmail(data.getEmail());
+		verify(userRepository).findByEmail(data.email());
 		
 		verify(scoreRepository).saveAndFlush(any(Score.class));		
 		

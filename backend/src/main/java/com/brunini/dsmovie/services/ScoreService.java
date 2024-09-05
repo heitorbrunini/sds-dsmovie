@@ -25,20 +25,20 @@ public class ScoreService {
 	@Transactional
 	public Score saveScore(ScoreDTO dto) {
 		
-		User user = userRepository.findByEmail(dto.getEmail());
+		User user = userRepository.findByEmail(dto.email());
 		
 		if (user==null) {
 			user = new User();
-			user.setEmail(dto.getEmail());
+			user.setEmail(dto.email());
 			user = userRepository.saveAndFlush(user);
 		}
 		
-		Movie movie = movieRepository.findById(dto.getMovieId()).get();
+		Movie movie = movieRepository.findById(dto.movieId()).get();
 		
 		Score score = new Score();
 		score.setMovie(movie);
 		score.setUser(user);
-		score.setValue(dto.getScore());
+		score.setValue(dto.score());
 		
 		score = scoreRepository.saveAndFlush(score);
 		
