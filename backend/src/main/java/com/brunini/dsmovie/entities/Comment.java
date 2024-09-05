@@ -19,5 +19,13 @@ public class Comment {
     @EmbeddedId
     private ScorePK id = new ScorePK();
     private String comment;
+    
+    public void setMovie(Movie movie) {
+		id.setMovie(movie);
+	}
+	
+	public void setUser(User user) {
+		id.setUser(user);
+	}
 
 }
