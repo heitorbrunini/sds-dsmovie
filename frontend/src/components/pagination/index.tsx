@@ -1,4 +1,3 @@
-import { ReactComponent as Arrow } from 'assets/arrow.svg';
 import { MoviePage } from 'types/movie';
 import './styles.css';
 
@@ -15,7 +14,7 @@ function Pagination({ page, onChange }: Props) {
         <nav aria-label="...">
             <ul className="pagination" data-bs-theme="dark">
                 <li className={`page-item ${page.first ? 'disabled' : ''}`}>
-                    <a className="page-link" onClick={() => !page.first && onChange(page.number - 1)}>Anterior</a>
+                    <a className="page-link " onClick={() => !page.first && onChange(page.number - 1)}>Anterior</a>
                 </li>
     
                 {Array.from({ length: page.totalPages }, (_, index) => (

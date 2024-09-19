@@ -5,10 +5,9 @@ import Pagination from "components/pagination";
 import { useEffect, useState } from "react";
 import { MoviePage } from "types/movie";
 import { BASE_URL } from "utils/request";
-import Categorias from "components/Categories";
 
 //yarn run v1.22.10
-function Listing() {
+function Comment() {
 
     const [pageNumber, setPageNumber] = useState(0);
 
@@ -25,7 +24,7 @@ function Listing() {
     });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/movies?size=15&page=${pageNumber}&sort=id`).then(
+        axios.get(`${BASE_URL}/comments?size=15&page=${pageNumber}&sort=id`).then(
             response => {
                 const data = response.data as MoviePage;
                 setPage(data);
@@ -39,12 +38,8 @@ function Listing() {
 
     return (
         <>
-
-            <br></br>
+           <br></br>
             <div className="container">
-                <div className="row">
-                    <Categorias setPageParent = {setPage} />
-                </div>
                 <div className="row" >
                     {page.content.map(movie => (
                         <div key={movie.id} className="col mb-3">
@@ -59,4 +54,4 @@ function Listing() {
     );
 }
 
-export default Listing;
+export default Comment;
