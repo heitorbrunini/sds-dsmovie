@@ -26,4 +26,14 @@ public class MovieController {
 	public MovieDTO findById (@PathVariable Long id){
 		return service.findById(id);
 	}
+	
+	@GetMapping (value = "name/{title}")
+	public MovieDTO findByTitle (@PathVariable String title){
+		return service.findByTitle(title);
+	}
+	
+	@GetMapping (value = "/filter/{category}")
+	public Page<MovieDTO> findByCategory (@PathVariable String category, Pageable pageable){
+		return service.findByCategory(category, pageable);
+	}
 }

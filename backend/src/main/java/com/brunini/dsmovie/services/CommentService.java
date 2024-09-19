@@ -1,6 +1,8 @@
 package com.brunini.dsmovie.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -44,4 +46,12 @@ public class CommentService {
 		
 		return comment;
 	}
+	
+	@Transactional(readOnly = true)
+	public Page<CommentDTO> findAll(Pageable pageable) {
+		Page<Comment> data = commentRepository.findAll(pageable);
+		Page<CommentDTO> result = data.map(x -> new CommentDTO(x));
+		return result;
+	}
+	
 }
