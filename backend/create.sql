@@ -42,7 +42,7 @@ INSERT INTO tb_movie(score, count, title, image, category) VALUES (0, 0, 'Tudo S
 INSERT INTO tb_movie(score, count, title, image, category) VALUES (0, 0, 'Babel', 'https://www.themoviedb.org/t/p/w500_and_h282_face/o2eG4ugPId4cY6gp2C1MBm33UG.jpg', 'Drama');
 INSERT INTO tb_movie(score, count, title, image, category) VALUES (0, 0, 'Birdman', 'https://www.themoviedb.org/t/p/w500_and_h282_face/pDqwUJJSaHIv2sxyRYfmYBFeU9C.jpg', 'Comedy');
 INSERT INTO tb_movie(score, count, title, image, category) VALUES (0, 0, 'Fale com Ela', 'https://www.themoviedb.org/t/p/w500_and_h282_face/oJrOrkFd32Zau6HYZ4jJprqhzlc.jpg', 'Romance');
-INSERT INTO tb_movie(score, count, title, image, category) VALUES (0, 0, 'Contato', 'https://www.themoviedb.org/t/p/w500_and_h822_face/yFkUPqBuUnbhYbQL8VFpTrAT9za.jpg', 'Sci-Fi' );
+INSERT INTO tb_movie(score, count, title, image, category) VALUES (0, 0, 'Contato', 'https://www.themoviedb.org/t/p/w500_and_h282_face/yFkUPqBuUnbhYbQL8VFpTrAT9za.jpg', 'Sci-Fi' );
 INSERT INTO tb_movie(score, count, title, image, category) VALUES (0, 0, 'Sem Amor', 'https://www.themoviedb.org/t/p/w500_and_h282_face/wR1pvbWjAVEK9315ibedBwdyRLI.jpg', 'Drama');
 INSERT INTO tb_movie(score, count, title, image, category) VALUES (0, 0, 'O Operário', 'https://www.themoviedb.org/t/p/w500_and_h282_face/hi3lxLd93iKwCmVAfhMV9m1k2jr.jpg', 'Drama');
 INSERT INTO tb_movie(score, count, title, image, category) VALUES (0, 0, 'Dias Melhores', 'https://www.themoviedb.org/t/p/w500_and_h282_face/pi3yXaJzVxZUayUfqMekcsN199A.jpg', 'Drama');
