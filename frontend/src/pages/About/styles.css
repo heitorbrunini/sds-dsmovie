@@ -1,0 +1,75 @@
+* {
+    color: #fff;
+}
+
+
+/* Estilo para o título principal */
+h1 {
+    color: #4CAF50;
+    text-align: center;
+}
+
+/* Estilo para os subtítulos */
+h2 {
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+/* Estilo para parágrafos e lista */
+p, ul, ol {
+    margin: 10px 0;
+    padding: 0;
+}
+
+/* Estilização de listas */
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Estilização de links */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para as figuras */
+figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Estilo para códigos e comandos */
+code {
+    background-color: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Estilo para listas ordenadas e não ordenadas */
+ul li, ol li {
+    margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+}
