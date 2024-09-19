@@ -47,7 +47,7 @@ class ScoreServiceTest {
 
 	@Test
 	void testSaveScore() {
-		Movie movie = new Movie(1L,"Segredo dos inocentes", 5.0, 2, "image.png");		
+		Movie movie = new Movie(1L,"Segredo dos inocentes", 5.0, 2, "image.png", "categoria1");		
 		User user =  new User(1L, "bob@gmail.com");
 		
 		ScoreDTO data = new ScoreDTO(1L,"bob@gmail.com",5.0);

@@ -49,8 +49,8 @@ class MovieServiceTest {
 	@DisplayName("Should get movies sucessfully from DB")
 	void testFindAll() {
 		
-		Movie movie1 = new Movie(1L,"Segredo dos inocentes", 5.0, 2, "image.png");
-		Movie movie2 = new Movie(2L,"O profisisonal", 4.9, 4, "image.png");		
+		Movie movie1 = new Movie(1L,"Segredo dos inocentes", 5.0, 2, "image.png", "categoria1");
+		Movie movie2 = new Movie(2L,"O profisisonal", 4.9, 4, "image.png", "categoria2");		
 		
 
         List<Movie> moviesList = Arrays.asList(movie1, movie2);
@@ -70,7 +70,7 @@ class MovieServiceTest {
 	@DisplayName("Should get movie by ID sucessfully from DB")
 	void testFindId() {
 		
-		Movie movie= new Movie(1L,"Segredo dos inocentes", 5.0, 2, "image.png");
+		Movie movie= new Movie(1L,"Segredo dos inocentes", 5.0, 2, "image.png", "categoria2");
 		
 		//you are testing the service, so you need input the value in repository
 		when(repository.findById(1L)).thenReturn(Optional.of(movie));

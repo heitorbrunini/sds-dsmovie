@@ -34,6 +34,7 @@ public class Movie {
 	private Double score;
 	private Integer count;
 	private String image;
+	private String category;
 	
 	@OneToMany(mappedBy = "id.movie")
 	private Set<Score> scores = new HashSet<>();
@@ -46,8 +47,9 @@ public class Movie {
 		this.image = data.image();
 	}
 
-	public Movie(Long id, String title, Double score, Integer count, String image) {
+	public Movie(Long id, String title, Double score, Integer count, String image, String category) {
 		this.id = id;
+		this.category = category;
 		this.title = title;
 		this.score = score;
 		this.count = count;
