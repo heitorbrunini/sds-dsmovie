@@ -16,6 +16,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import com.brunini.dsmovie.dto.ScoreDTO;
+import com.brunini.dsmovie.entities.Category;
 import com.brunini.dsmovie.entities.Movie;
 import com.brunini.dsmovie.entities.Score;
 import com.brunini.dsmovie.entities.ScorePK;
@@ -47,14 +48,14 @@ class ScoreServiceTest {
 
 	@Test
 	void testSaveScore() {
-		Movie movie = new Movie(1L,"Segredo dos inocentes", 5.0, 2, "image.png", "categoria1");		
+		Movie movie = new Movie(1L,"Segredo dos inocentes", 5.0, 2, "image.png", new Category (1L, "sci-fi"));		
 		User user =  new User(1L, "bob@gmail.com");
 		
-		ScoreDTO data = new ScoreDTO(1L,"bob@gmail.com",5.0);
+		ScoreDTO data = new ScoreDTO(1L,"bob@gmail.com",5.0,"bom filme");
 		
 		ScorePK spk = new ScorePK(movie, user);
 		
-		Score savedScore = new Score(spk,5.0);
+		Score savedScore = new Score(spk,5.0,"bom filme");
 			
 		when(movieRepository.save(any(Movie.class))).thenReturn(movie);
 		when(movieRepository.findById(1L)).thenReturn(Optional.of(movie));

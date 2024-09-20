@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.brunini.dsmovie.dto.MovieDTO;
 import com.brunini.dsmovie.entities.Movie;
+import com.brunini.dsmovie.repositories.CategoryRepository;
 import com.brunini.dsmovie.repositories.MovieRepository;
 
 @Service
@@ -15,6 +16,9 @@ public class MovieService {
 	
 	@Autowired
 	private MovieRepository repository;
+	
+	@Autowired
+	private CategoryRepository catRepository;
 	
 	@Transactional(readOnly = true)
 	public Page<MovieDTO> findAll(Pageable pageable) {
@@ -37,7 +41,7 @@ public class MovieService {
 	}
 	
 	public Page<MovieDTO> findByCategory(String category,Pageable pageable){
-		Page<Movie> result = repository.findByCategory(category, pageable);
+		Page<Movie> result = repository.findByCategory(catRepository.findByName(category), pageable);
 		Page<MovieDTO> page= result.map(x -> new MovieDTO(x));		
 		return page;
 	}

@@ -1,6 +1,8 @@
 package com.brunini.dsmovie.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -39,6 +41,7 @@ public class ScoreService {
 		score.setMovie(movie);
 		score.setUser(user);
 		score.setValue(dto.score());
+		score.setComment(dto.comment());
 		
 		score = scoreRepository.saveAndFlush(score);
 		
@@ -54,6 +57,11 @@ public class ScoreService {
 		return score;
 	}
 	
-	
+	@Transactional(readOnly = true)
+	public Page<ScoreDTO> findAll(Pageable pageable) {
+		Page<Score> data = scoreRepository.findAll(pageable);
+		Page<ScoreDTO> result = data.map(x -> new ScoreDTO(x));
+		return result;
+	}
 		
 }

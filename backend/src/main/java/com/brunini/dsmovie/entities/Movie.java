@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -34,7 +36,10 @@ public class Movie {
 	private Double score;
 	private Integer count;
 	private String image;
-	private String category;
+	
+	@ManyToOne
+	@JoinColumn(name = "category_id")
+	private Category category;
 	
 	@OneToMany(mappedBy = "id.movie")
 	private Set<Score> scores = new HashSet<>();
@@ -47,7 +52,7 @@ public class Movie {
 		this.image = data.image();
 	}
 
-	public Movie(Long id, String title, Double score, Integer count, String image, String category) {
+	public Movie(Long id, String title, Double score, Integer count, String image, Category category) {
 		this.id = id;
 		this.category = category;
 		this.title = title;

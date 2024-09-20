@@ -25,6 +25,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.ActiveProfiles;
 
 import com.brunini.dsmovie.dto.MovieDTO;
+import com.brunini.dsmovie.entities.Category;
 import com.brunini.dsmovie.entities.Movie;
 import com.brunini.dsmovie.repositories.MovieRepository;
 
@@ -49,8 +50,10 @@ class MovieServiceTest {
 	@DisplayName("Should get movies sucessfully from DB")
 	void testFindAll() {
 		
-		Movie movie1 = new Movie(1L,"Segredo dos inocentes", 5.0, 2, "image.png", "categoria1");
-		Movie movie2 = new Movie(2L,"O profisisonal", 4.9, 4, "image.png", "categoria2");		
+		Category cat1 = new Category (1L, "sci-fi");
+				
+		Movie movie1 = new Movie(1L,"Segredo dos inocentes", 5.0, 2, "image.png", cat1);
+		Movie movie2 = new Movie(2L,"O profisisonal", 4.9, 4, "image.png", cat1);		
 		
 
         List<Movie> moviesList = Arrays.asList(movie1, movie2);
@@ -70,7 +73,7 @@ class MovieServiceTest {
 	@DisplayName("Should get movie by ID sucessfully from DB")
 	void testFindId() {
 		
-		Movie movie= new Movie(1L,"Segredo dos inocentes", 5.0, 2, "image.png", "categoria2");
+		Movie movie= new Movie(1L,"Segredo dos inocentes", 5.0, 2, "image.png", new Category (1L, "drama"));
 		
 		//you are testing the service, so you need input the value in repository
 		when(repository.findById(1L)).thenReturn(Optional.of(movie));

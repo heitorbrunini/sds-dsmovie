@@ -22,6 +22,7 @@ public class Score {
 	@EmbeddedId
 	private ScorePK id = new ScorePK();
 	private Double value;
+	private String comment;
 
 	public void setMovie(Movie movie) {
 		id.setMovie(movie);
