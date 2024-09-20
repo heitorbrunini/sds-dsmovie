@@ -28,7 +28,7 @@ function Categorias({ setPageParent }: CategoriasProps) {
 
         if (!category) return;
 
-        setActiveCategory(category);  // Atualiza a categoria ativa
+        setActiveCategory(category);  
 
         if (category === "Todos os filmes") {
             axios.get(`${BASE_URL}/movies?size=15&page=0&sort=id`).then(

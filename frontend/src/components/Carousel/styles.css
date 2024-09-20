@@ -1,0 +1,21 @@
+.carousel {
+    height: 400px; /* Altura do carousel */
+    overflow: hidden; /* Impede que a imagem ultrapasse o container */
+}
+
+.carousel-item {
+    height: 100%; /* Faz o item ocupar 100% da altura do carousel */
+    display: flex; /* Usar flexbox para centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente se necessário */
+}
+
+.carousel-item img {
+    height: 400px; /* Mantém a altura original da imagem */
+    width: 100%; /* Ajusta a largura da imagem para ocupar o container */
+    max-height: 100%; /* Limita a altura máxima da imagem */
+    object-fit: cover; /* Cobre o container sem deformar a imagem */
+}
+button:hover{
+    background-color: transparent!important;    
+}
