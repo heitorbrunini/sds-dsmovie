@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { MoviePage } from "types/movie";
 import { BASE_URL } from "utils/request";
 import Categorias from "components/Categories";
+import Carousel from "components/Carousel";
 
 //yarn run v1.22.10
 function Listing() {
@@ -38,8 +39,8 @@ function Listing() {
     }
 
     return (
-        <>
-
+        <> 
+        <Carousel/>
             <br></br>
             <div className="container">
                 <div className="row">

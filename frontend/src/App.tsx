@@ -5,6 +5,7 @@ import Form from 'pages/Form';
 import About from 'pages/About'
 import Navbar from './components/navbar';
 import Contact from "pages/Contact";
+import Scores from "pages/Scores";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Listing />} />
+        <Route path="/comments" element={ <Scores/> }/>
         <Route path="/about" element= {<About/>}/>
         <Route path="/contact" element= {<Contact/>}/>
         <Route path="/form">

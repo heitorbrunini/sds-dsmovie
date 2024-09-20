@@ -1,17 +1,17 @@
 
 import axios from "axios";
-import MovieCard from "components/MovieCard";
+import CommentCard from "components/CommentCard";
 import Pagination from "components/pagination";
 import { useEffect, useState } from "react";
-import { MoviePage } from "types/movie";
+import { ScorePage } from "types/movie";
 import { BASE_URL } from "utils/request";
 
 //yarn run v1.22.10
-function Comment() {
+function Scores() {
 
     const [pageNumber, setPageNumber] = useState(0);
 
-    const [page, setPage] = useState<MoviePage>({
+    const [page, setPage] = useState<ScorePage>({
         content: [],
         last: true,
         totalPages: 0,
@@ -24,9 +24,9 @@ function Comment() {
     });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/comments?size=15&page=${pageNumber}&sort=id`).then(
+        axios.get(`${BASE_URL}/scores?size=15&page=${pageNumber}&sort=id`).then(
             response => {
-                const data = response.data as MoviePage;
+                const data = response.data as ScorePage;
                 setPage(data);
             }
         );
@@ -38,13 +38,17 @@ function Comment() {
 
     return (
         <>
-           <br></br>
+
+            <br></br>
             <div className="container">
+
                 <div className="row" >
-                    {page.content.map(movie => (
-                        <div key={movie.id} className="col mb-3">
-                            <MovieCard movie={movie} />
+                    {page.content.map(score => (
+                        
+                        <div className="col mb-3">
+                            <CommentCard score={score} />
                         </div>
+
                     ))}
                 </div>
             </div>
@@ -54,4 +58,4 @@ function Comment() {
     );
 }
 
-export default Comment;
+export default Scores;

@@ -6,8 +6,9 @@ export type Movie = {
     image: string;
 }
 
-export type Comment = {
+export type Score = {
     movieId: number;
+    value: number;
     email: string;
     comment: string;
 }
@@ -24,8 +25,8 @@ export type MoviePage = {
     empty: boolean;
 }
 
-export type CommentPage = {
-    content: Comment[];
+export type ScorePage = {
+    content: Score[];
     last: boolean;
     totalPages: number;
     totalElements: number;
@@ -35,3 +36,13 @@ export type CommentPage = {
     numberOfElements: number;
     empty: boolean;
 }
+
+export type User ={
+    id: number;
+    email: string;
+}
+
+export type PaginationProps<T extends { first: boolean; last: boolean; number: number; totalPages: number }> = {
+    page: T;
+    onChange: (pageNumber: number) => void;
+};

@@ -1,12 +1,7 @@
-import { MoviePage } from 'types/movie';
+import { PaginationProps } from 'types/movie';
 import './styles.css';
 
-type Props = {
-    page: MoviePage;
-    onChange: Function;
-}
-
-function Pagination({ page, onChange }: Props) {
+function Pagination<T extends { first: boolean; last: boolean; number: number; totalPages: number }>({ page, onChange }: PaginationProps<T>) {
 
 
     return (
@@ -32,9 +27,6 @@ function Pagination({ page, onChange }: Props) {
         </nav>
     </div>
     
-
-        
-
     );
 }
 

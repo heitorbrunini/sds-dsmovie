@@ -19,6 +19,7 @@ function Navbar() {
                 setMovie(response.data);
                 console.log(response.data);
             });
+        setSearchValue('');
     }, [searchValue]);
 
     return (
@@ -35,9 +36,13 @@ function Navbar() {
                                     <a className="nav-link active" aria-current="page" >Home</a>
                                 </li>
                             </Link>
-                            <li className="nav-item">
-                                <a className="nav-link">Comentarios</a>
-                            </li>
+                            <Link to="/comments">
+                                <li className="nav-item">
+                                    <a className="nav-link">Comentarios</a>
+                                </li>
+
+                            </Link>
+
 
                             <Link to="/about">
                                 <li className="nav-item">

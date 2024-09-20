@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 import { Movie } from 'types/movie';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; 
 import { BASE_URL } from 'utils/request';
+import { color } from 'framer-motion';
 
 type Props ={
     movieId : string;
 }
 
 function FormCard({movieId} : Props) {
+    const navigate = useNavigate();
 
     const [movie,setMovie] = useState<Movie>();
     const [email, setEmail] = useState<string>('');
@@ -36,36 +39,26 @@ function FormCard({movieId} : Props) {
     }
 
     const handleSaveButtonClick = () => {
-        // Realiza a requisição PUT para /scores com os parâmetros movieId, email e score
+        
         axios.post(`${BASE_URL}/scores`, {
             movieId: movieId,
             email: email,
-            score: score
-        }).then(response => {
-            console.log('Avaliação salva com sucesso!');
-            // Faça qualquer manipulação adicional ou redirecionamento aqui, se necessário
-        }).catch(error => {
-            console.error('Erro ao tentar salvar a avaliação:', error);
-        });
-
-        axios.post(`${BASE_URL}/comments`, {
-            movieId: movieId,
-            email: email,
+            score: score,
             comment: comment
         }).then(response => {
-            console.log('Comentário salvo com sucesso!');
-            // Faça qualquer manipulação adicional ou redirecionamento aqui, se necessário
+            console.log('Avaliação salva com sucesso!');
+            navigate('/');  // Redireciona para a página inicial "/"
         }).catch(error => {
-            console.error('Erro ao tentar salvar o comentário:', error);
+            console.error('Erro ao tentar salvar a avaliação:', error);
         });
 
     }
 
     return (            
-        <div className="dsmovie-form-container">
+        <div className="dsmovie-form-container" data-bs-theme="dark">
             <img className="dsmovie-movie-card-image" src={movie?.image} alt={movie?.title} />
             <div className="dsmovie-card-bottom-container">
-                <h3> {movie?.title}</h3>
+                <h3 style={{color:'white'}}> {movie?.title}</h3>
                 <form className="form-group dsmovie-form-group">
                     <div className="dsmovie-form">
                         <label htmlFor="email">Informe seu Email</label>
